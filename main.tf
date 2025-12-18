@@ -100,14 +100,24 @@ resource "azurerm_application_insights" "app_insights" {
 }
 
 # Linux Consumption Plan (FREE eligible)
+# resource "azurerm_service_plan" "function_plan" {
+#   name                = "${var.function_app_name}-plan"
+#   resource_group_name = var.resource_group_name
+#   location            = var.location
+
+#   os_type   = "Linux"
+#   sku_name = "Y1"
+# }
+
 resource "azurerm_service_plan" "function_plan" {
   name                = "${var.function_app_name}-plan"
   resource_group_name = var.resource_group_name
   location            = var.location
 
   os_type   = "Linux"
-  sku_name = "Y1"
+  sku_name = "B1"
 }
+
 
 # Linux Function App
 resource "azurerm_linux_function_app" "this" {
