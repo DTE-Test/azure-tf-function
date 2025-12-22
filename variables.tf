@@ -1,58 +1,30 @@
-# variable "function_app_name" {
-#   type = string
-# }
-
-# variable "storage_account_prefix" {
-#   type = string
-# }
-
-# variable "resource_group_name" {
-#   type = string
-# }
-
-# variable "location" {
-#   type = string
-# }
-
-# variable "cosmos_db_connection_string" {
-#   type = string
-# }
-
-# variable "app_insights_name" {
-#   type = string
-# }
-
-# variable "environment" {
-#   type = string
-# }
-
-#########newly added variables ##########
-
-variable "function_app_name" {
-  type = string
+variable "name" { 
+    type = string 
+    }
+variable "environment" { 
+    type = string 
+    }
+variable "location" { 
+    type = string 
+    }
+variable "rg_name" { 
+    type = string 
+    }
+variable "cosmos_endpoint" { 
+    type = string 
+    default = " "
+    }
+variable "cosmosdb_name" {
+    type = string
+    default = " "
 }
-
-variable "storage_account_prefix" {
-  type = string
-}
-
-variable "resource_group_name" {
-  type = string
-}
-
-variable "location" {
-  type = string
-}
-
-variable "app_insights_name" {
-  type = string
-}
-
-variable "environment" {
-  type = string
-}
-
-variable "extra_app_settings" {
-  type    = map(string)
-  default = {}
-}
+variable "cosmos_key" { 
+    type = string 
+    default = " "
+    }
+variable "cosmos_database" { 
+    type = string 
+    }
+variable "cosmos_container" { 
+    type = string 
+    }
