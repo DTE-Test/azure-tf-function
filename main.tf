@@ -31,7 +31,7 @@ resource "azurerm_linux_function_app" "func" {
     COSMOS_ENDPOINT          = var.cosmos_endpoint
   COSMOS_KEY       = var.cosmos_key
   COSMOS_DATABASE  = var.cosmos_database
-  COSMOS_CONTAINER = var.cosmos_container
+  COSMOS_CONTAINER = "${var.cosmos_container}-container"
     FUNCTIONS_WORKER_RUNTIME = "node"
    # WEBSITE_RUN_FROM_PACKAGE = "1"
   }
